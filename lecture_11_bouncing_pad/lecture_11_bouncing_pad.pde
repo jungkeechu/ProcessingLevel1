@@ -1,19 +1,19 @@
-int xPos, yPos;
+int x, y;
+int diam;
 int xDir, yDir;
-int diameter;
-  
-color ballColor, padColor;
+color ballColor;
 
 int padX, padY;
 int padWidth;
+color padColor;
 
 void setup(){
   size(800, 600);
-  xPos = width / 2;
-  yPos = height / 2;
+  x = width / 2;
+  y = height / 2;
   xDir = -4;
   yDir = -4;
-  diameter = 50;
+  diam = 50;
   ballColor = #FFFF00;
   padColor = #00FF00;
   padX = width/2;
@@ -27,9 +27,9 @@ void draw(){
    
     // ball drawing
     fill(ballColor);
-    ellipse(xPos, yPos, diameter, diameter); 
-    xPos += xDir; //xPos = xPos + xDir;
-    yPos += yDir; 
+    ellipse(x, y, diam, diam); 
+    x += xDir; //x = x + xDir;
+    y += yDir; 
     
     // drawing racket...
     fill(padColor);
@@ -37,24 +37,24 @@ void draw(){
     rect(padX, padY, padWidth, 20, 15);
     
     // ball bouncing 
-    if ( xPos < diameter/2) { // left side check
+    if ( x < diam/2) { // left side check
       xDir *= -1;
       //padWidth = padWidth - 10;
     }
-    if ( xPos > width-diameter/2) { // right side check
+    if ( x > width-diam/2) { // right side check
       xDir *= -1;
       //padWidth = padWidth - 20;
     }
-    if ( yPos < diameter/2) {
+    if ( y < diam/2) {
       yDir *= -1;
     }
-    if ( yPos > height-diameter/2 ) {
+    if ( y > height-diam/2 ) {
       yDir *= -1;
     }
     
-    if ( xPos > padX &&
-         xPos < padX + padWidth &&
-         yPos > padY-diameter/2){
+    if ( x > padX &&
+         x < padX + padWidth &&
+         y > padY-diam/2){
            yDir *= -1;
            fill(#FF0000);
            rect(padX+2, padY+2, padWidth-4, 16, 15);
