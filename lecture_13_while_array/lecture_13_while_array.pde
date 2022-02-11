@@ -8,7 +8,7 @@ numbers[2] = 30;
 
 printArray(numbers);
 println(numbers[0], numbers[1], numbers[2]);
-//print(numbers[3]); // Error
+print(numbers[3]); // Error
 
 int a = numbers[0] + numbers[1]; // Sets variable 'a' to 240
 int b = numbers[1] + numbers[2]; // Sets variable 'b' to 180 
