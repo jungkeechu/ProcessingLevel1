@@ -104,10 +104,10 @@ void draw(){
   rect(padX, padY, padWidth, 20, 15);  
   
   // ball bouncing 
-  if ( x < diam/2 || x > width-diam/2) { // left and right side check
+  if ( x <= diam/2 || x > width-diam/2) { // left and right side check
     xDir *= -1;
   }
-  if ( y > height-diam/2 ) { // down side check
+  if ( y >= height-diam/2 ) { // down side check
     yDir *= -1;
   }
   
@@ -119,7 +119,7 @@ void draw(){
         bricks[y/bHeight][x/bWidth]--;
         score++;
     }
-    else if ( y < 0) yDir *= -1;     // bounce at the top
+    else if ( y <= 0) yDir *= -1;     // bounce at the top
   }
   
   // pad bounding
