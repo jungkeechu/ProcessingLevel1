@@ -86,6 +86,18 @@ void draw(){
   x += xDir; //x = x + xDir;
   y += yDir; 
   
+  //*****
+  // for the 2d array indexing, we use division operator. 
+  // In this case, we have to make sure x and y are on the canvas. 
+  //x = (x < width)? x: width-1;
+  //y = (y < height)? y: height-1;
+  //x = (x < 0)? 0: x;
+  //y = (y < 0)? 0: y;  
+  // or we can use constrain() function.
+  x = constrain(x, 0, width-1);
+  y = constrain(y, 0, height-1);
+  //*****
+  
   // drawing a pad at new positon
   fill(padColor);
   padX = mouseX - padWidth/2;
