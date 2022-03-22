@@ -66,7 +66,6 @@ void draw(){
   strokeWeight(2); // stroke thickness
 
   // bricks drawing
-  // if it is '1', a brick shows, otherwise it doesn't appear.
   for(i=0; i<bRowNo; i++){
     for(j=0; j<bColNo; j++){
       if ( bricks[i][j] == 1) {
@@ -87,7 +86,7 @@ void draw(){
   y += yDir; 
   
   //*****
-  // for the 2d array indexing, we use division operator. 
+  // for the 2d array indexing, we use division operator for collision checking between the ball and bricks. 
   // In this case, we have to make sure x and y are on the canvas. 
   //x = (x < width)? x: width-1;
   //y = (y < height)? y: height-1;
