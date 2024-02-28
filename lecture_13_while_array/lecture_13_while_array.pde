@@ -6,7 +6,7 @@ numbers[0] = 90;  // [ index ]
 numbers[1] = 150;
 numbers[2] = 30;
 
-printArray(numbers);
+
 println(numbers[0], numbers[1], numbers[2]);
 print(numbers[3]); // Error
 
@@ -32,3 +32,5 @@ while (i < numbers3.length){ // # of elements of the array
 for(int j = 0; j < numbers3.length; j++){
   println(numbers3[i]);
 }
+
+// can you print out all items from the end?
